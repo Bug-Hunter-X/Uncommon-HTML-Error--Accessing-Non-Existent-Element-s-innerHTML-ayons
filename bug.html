@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrect way to access a non-existent element
+    document.getElementById('nonExistent').innerHTML = "This will cause an error!";
+    document.getElementById("myDiv").innerHTML = "This is correct";
+  </script>
+</body>
+</html>
