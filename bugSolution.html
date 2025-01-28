@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    const element = document.getElementById('myDiv');
+    if (element) {
+      element.innerHTML = "This is correct";
+    } else {
+      console.error("Element not found"); // Handle the case where the element doesn't exist
+    }
+    
+    // Attempting to access a non-existent element will only log an error to the console.
+    const nonExistentElement = document.getElementById('nonExistent');
+    if(nonExistentElement){
+      nonExistentElement.innerHTML = "This will not execute";
+    } else {
+        console.error("Element 'nonExistent' does not exist!");
+    }
+  </script>
+</body>
+</html>
